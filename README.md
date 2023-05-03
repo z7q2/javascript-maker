@@ -2,7 +2,7 @@
 The eternal quest for the perfect javascript maker library
 
 In 1994 my dial-up unix internet provider gave users public www directories. Suddenly I was a publisher, designing HTML for lynx and Mosaic, tinkering with cgi scripts.
-Then Netscape added scripting, and suddenly the web became a place to write programs.
+Then Netscape added scripting, and the web became a place to write programs.
 Immediately a war broke out between Javascript and JScript.
 Ostensibly a truce was declared with ECMAScript in 1997.
 But it's not truly been a joy to program in pure Javascript until ES6 became the norm.
