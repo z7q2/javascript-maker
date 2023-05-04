@@ -4,20 +4,40 @@
 <meta charset="utf-8" />
 <title>javascript-maker implementation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<style type="text/css" media="screen">
+button {
+  font-family:monospace;
+  display:block;
+  margin:0.25em;
+  padding:0.25em;
+}
+</style>
 <script type="text/javascript">
-window.onload=()=>{
-const g={},
-m=(...p)=>{
+const m=(...p)=>{
   const d=document;
   if(typeof p[0]==="string"){
     let e=d.createElement(p[0]);
+    if(typeof p[1]==="string"){
+      d.querySelector(p[1]).appendChild(e);
+    }
     return e;
   }
   return;
 };
-console.log(m("foo"));
+window.onload=()=>{
+  const d=document;
+  d.querySelector("#c1").onclick=()=>{console.log(m());};
+  d.querySelector("#c2").onclick=()=>{console.log(m("div"));};
+  d.querySelector("#c3").onclick=()=>{console.log(m("foo"));};
+  d.querySelector("#c4").onclick=()=>{console.log(m("div","body"));};
 };
 </script>
 </head>
-<body></body>
+<body>
+  <p>Please view your console for the result of these buttons.</p>
+  <button id="c1">m();</button>
+  <button id="c2">m("div");</button>
+  <button id="c3">m("foo");</button>
+  <button id="c4">m("div","body");</button>
+</body>
 </html>
