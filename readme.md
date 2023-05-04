@@ -21,6 +21,14 @@ I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 
 Basic syntax:
 ```
-m({});
+m();
 ```
-Everything the maker function **m()** does depends on the object you give it. If you give it an empty object, or nothing, it returns undefined.
+> *undefined*
+
+Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
+
+If you provide a string, the function returns an object created with that string.
+```
+m("div");
+```
+> \<div\>\</div\>
