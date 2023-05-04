@@ -22,4 +22,4 @@ Basic syntax:
 ```
 m({});
 ```
-Everything the maker function **m()** does depends on the object you give it. If you give it an empty object, it does nothing.
+Everything the maker function **m()** does depends on the object you give it. If you give it an empty object, or nothing, it returns undefined.
