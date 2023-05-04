@@ -8,9 +8,14 @@
 (()=>{
 const g={},
 m=(o)=>{
+  const d=document;
+  if(typeof o.c!=="undefined"){
+    let e=d.createElement(o.c);
+    return e;
+  }
   return;
 };
-console.log(m({}));
+console.log(m({c:"div"}));
 })();
 </script>
 </head>
