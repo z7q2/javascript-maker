@@ -19,13 +19,12 @@ so I had to study the language and come up with my own **maker libraries**, as I
 This library has been written and re-written many times over the years. 
 I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 
-Basic syntax:
+Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
 ```
 m();
 > undefined
 ```
 
-Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
 
 If you provide a string, the function returns an object created with that string.
 ```
