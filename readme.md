@@ -45,7 +45,7 @@ m("foo");
 > <foo></foo>
 ```
 
-If you want to attach this object to another object (or objects), provide a css selector as a second paramter. The new object will be attached to the existing object and returned.
+If you want to attach this object to another object, provide a css selector as a second paramter. The new object will be attached to the selected object and returned.
 ```
 m("div","body");
 > <div></div>
