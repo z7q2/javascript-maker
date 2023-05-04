@@ -22,7 +22,7 @@ I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 
 ### Live Example
 
-<a href="https://z7q2.azurewebsites.net/javascript-maker/index.html">https://z7q2.azurewebsites.net/javascript-maker/index.html</a>
+<a href="https://z7q2.azurewebsites.net/javascript-maker/index.html" target="_new">https://z7q2.azurewebsites.net/javascript-maker/index.html</a>
 
 ### Syntax
 
