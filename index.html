@@ -7,12 +7,13 @@
 <script type="text/javascript">
 (()=>{
 const g={},
-m=(...a)=>{
+m=(...p)=>{
   const d=document;
-  console.log(a[0]);
-  console.log(a[1]);
+  console.log(typeof p[0]);
+  console.log(typeof p[1]);
   /*
-  if(typeof o.c!=="undefined"){
+  if(typeof p[0]!=="undefined"){
+    
     let e=d.createElement(o.c);
     return e;
   }
