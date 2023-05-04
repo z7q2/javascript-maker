@@ -32,17 +32,25 @@ m();
 > undefined
 ```
 
-
 If you provide a string, the function returns an object created with that string.
 ```
 m("div");
 > <div></div>
 ```
 
-This can be any object.
+This can be any object...
 ```
 m("foo");
 > <foo></foo>
+```
+
+...within reason. If you provide anything other than lower case a-z (ASCII 97-122), nothing happens and undefined is returned.
+```
+m("boo boo");
+> undefined
+
+m("New!");
+> undefined
 ```
 
 If you want to attach this object to another object, provide a css selector as a second parameter. The new object will be attached to the selected object and returned.
