@@ -9,15 +9,10 @@
 const g={},
 m=(...p)=>{
   const d=document;
-  console.log(typeof p[0]);
-  console.log(typeof p[1]);
-  /*
-  if(typeof p[0]!=="undefined"){
-    
-    let e=d.createElement(o.c);
+  if(typeof p[0]==="string"){
+    let e=d.createElement(p[0]);
     return e;
   }
-  */
   return;
 };
 console.log(m("div"));
