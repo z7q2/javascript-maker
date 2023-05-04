@@ -10,7 +10,7 @@ Now you can program Javascript to ES6 specs and pretty much everything will run 
 
 Up to this point, it was necessary to have a library that let you make things in every browser in a common language,
 so you didn't have to fork your code in awkward places.
-After a messy flirtation with browser detection, we moved sensibly to capability detection, and then wrote libraries to deal with it.
+After a messy flirtation with browser detection, we moved sensibly to feature detection, and then wrote libraries to deal with it.
 
 Things like JQuery didn't exist when I started writing browser scripts, so I had to study the language and come up with my own **maker libraries**, as I called them.
 This library has been written and re-written many times over the years. I'm setting out to re-write it yet again, but in a clean ES6 implementation.
