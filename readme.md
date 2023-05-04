@@ -17,3 +17,9 @@ Things like JQuery didn't exist when I started writing browser scripts,
 so I had to study the language and come up with my own **maker libraries**, as I called them.
 This library has been written and re-written many times over the years. 
 I'm setting out to re-write it yet again, but in a clean ES6 implementation.
+
+Basic syntax:
+```
+m({});
+```
+Everything the maker function **m()** does depends on the object you give it. If you give it an empty object, it does nothing.
