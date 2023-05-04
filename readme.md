@@ -20,6 +20,10 @@ so I had to study the language and come up with my own **maker libraries**, as I
 This library has been written and re-written many times over the years. 
 I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 
+### Live Example
+
+<a href="https://z7q2.azurewebsites.net/javascript-maker/index.html">https://z7q2.azurewebsites.net/javascript-maker/index.html</a>
+
 ### Syntax
 
 Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
@@ -39,4 +43,10 @@ This can be any object.
 ```
 m("foo");
 > <foo></foo>
+```
+
+If you want to attach this object to another object (or objects), provide a css selector as a second paramter. The new object will be attached to the existing object and returned.
+```
+m("div","body");
+> <div></div>
 ```
