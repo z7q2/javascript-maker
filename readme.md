@@ -22,13 +22,19 @@ I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 Basic syntax:
 ```
 m();
+> undefined
 ```
-> *undefined*
 
 Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
 
 If you provide a string, the function returns an object created with that string.
 ```
 m("div");
+> <div></div>
 ```
-> \<div\>\</div\>
+
+This can be any object.
+```
+m("foo");
+> <foo></foo>
+```
