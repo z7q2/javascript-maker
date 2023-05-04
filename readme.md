@@ -1,5 +1,6 @@
 # javascript-maker
-**The eternal quest for the perfect javascript maker library**
+
+### The eternal quest for the perfect javascript maker library
 
 In 1994 my dial-up unix internet provider gave users public www directories. 
 Suddenly I was a publisher, designing HTML for lynx and Mosaic, tinkering with cgi scripts.
@@ -18,6 +19,8 @@ Things like jQuery didn't exist when I started writing browser scripts,
 so I had to study the language and come up with my own **maker libraries**, as I called them.
 This library has been written and re-written many times over the years. 
 I'm setting out to re-write it yet again, but in a clean ES6 implementation.
+
+### Syntax
 
 Everything the maker function **m()** does depends on what you give it. If you give it nothing, it returns undefined.
 ```
