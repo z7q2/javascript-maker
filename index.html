@@ -16,6 +16,7 @@ button {
 const m=(...p)=>{
   const d=document;
   if(typeof p[0]==="string"){
+    if(/^[a-z]+$/.test(p[0])!==true)return;
     let e=d.createElement(p[0]);
     if(typeof p[1]==="string"){
       d.querySelector(p[1]).appendChild(e);
@@ -29,7 +30,9 @@ window.onload=()=>{
   d.querySelector("#c1").onclick=()=>{console.log(m());};
   d.querySelector("#c2").onclick=()=>{console.log(m("div"));};
   d.querySelector("#c3").onclick=()=>{console.log(m("foo"));};
-  d.querySelector("#c4").onclick=()=>{console.log(m("div","body"));};
+  d.querySelector("#c4").onclick=()=>{console.log(m("boo boo"));};
+  d.querySelector("#c5").onclick=()=>{console.log(m("New!"));};
+  d.querySelector("#c6").onclick=()=>{console.log(m("div","body"));};
 };
 </script>
 </head>
@@ -38,6 +41,8 @@ window.onload=()=>{
   <button id="c1">m();</button>
   <button id="c2">m("div");</button>
   <button id="c3">m("foo");</button>
-  <button id="c4">m("div","body");</button>
+  <button id="c4">m("boo boo");</button>
+  <button id="c5">m("New!");</button>
+  <button id="c6">m("div","body");</button>
 </body>
 </html>
