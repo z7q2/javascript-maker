@@ -1,5 +1,5 @@
 # javascript-maker
-<b>The eternal quest for the perfect javascript maker library</b>
+**The eternal quest for the perfect javascript maker library**
 
 In 1994 my dial-up unix internet provider gave users public www directories. 
 Suddenly I was a publisher, designing HTML for lynx and Mosaic, tinkering with cgi scripts.
