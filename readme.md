@@ -13,7 +13,7 @@ Now you can program Javascript to ES6 specs and pretty much everything will run 
 Up to this point, it was necessary to have a library that let you make things in every browser in a common language,
 so you didn't have to fork your code in awkward places.
 After a messy flirtation with browser detection, we moved sensibly to feature detection, and then wrote libraries to deal with it.
-At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV. It was fun.
+At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, and Chrome was still a demon lurking within Konqueror. It was fun.
 
 Things like jQuery didn't exist when I started writing browser scripts, 
 so I had to study the language and come up with my own **maker libraries**, as I called them.
