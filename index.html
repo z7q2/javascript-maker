@@ -23,22 +23,14 @@ m=(...p)=>{
         const q=d.querySelectorAll(p[1]),
         l=q.length;
         if(l===0)return false;
-        switch(l){
-          case 1:
-            q[0].appendChild(e);
-            break;
-          default:
-            q.forEach((item,key)=>{
-              if(key+1===l){
-                item.appendChild(e);
-              }else{
-                item.appendChild(e.cloneNode(true));
-              }
-            });
-        }
-      }catch(err){
-        return;
-      }
+        q.forEach((item,key)=>{
+          if(key+1===l){
+            item.appendChild(e);
+          }else{
+            item.appendChild(e.cloneNode(true));
+          }
+        });
+      }catch(err){return;}
     }
     return e;
   }
