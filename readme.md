@@ -32,7 +32,7 @@ m();
 > undefined
 ```
 
-If you provide a string, the function returns an object created with that string.
+If you provide a string as the first parameter, the function returns an object created with that string.
 ```
 m("div");
 > <div></div>
