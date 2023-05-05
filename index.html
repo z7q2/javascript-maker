@@ -25,7 +25,7 @@ const m=(...p)=>{
         if(l===0)return false;
         switch(l){
           case 1:
-            d.querySelector(p[1]).appendChild(e);
+            q[0].appendChild(e);
             break;
           default:
             q.forEach((item,key)=>{
@@ -51,10 +51,10 @@ window.onload=()=>{
   d.querySelector("#c3").onclick=()=>{console.log(m("foo"));};
   d.querySelector("#c4").onclick=()=>{console.log(m("boo boo"));};
   d.querySelector("#c5").onclick=()=>{console.log(m("New!"));};
-  d.querySelector("#c6").onclick=()=>{console.log(m("div","body"));};
-  d.querySelector("#c7").onclick=()=>{console.log(m("div","button"));};
-  d.querySelector("#c8").onclick=()=>{console.log(m("div","foo"));};
-  d.querySelector("#c9").onclick=()=>{console.log(m("div","New!"));};
+  d.querySelector("#c6").onclick=()=>{console.log(m("hr","body"));};
+  d.querySelector("#c7").onclick=()=>{console.log(m("hr","button"));};
+  d.querySelector("#c8").onclick=()=>{console.log(m("hr","foo"));};
+  d.querySelector("#c9").onclick=()=>{console.log(m("hr","New!"));};
 };
 </script>
 </head>
@@ -65,9 +65,9 @@ window.onload=()=>{
   <button id="c3">m("foo");</button>
   <button id="c4">m("boo boo");</button>
   <button id="c5">m("New!");</button>
-  <button id="c6">m("div","body");</button>
-  <button id="c7">m("div","button");</button>
-  <button id="c8">m("div","foo");</button>
-  <button id="c9">m("div","New!");</button>
+  <button id="c6">m("hr","body");</button>
+  <button id="c7">m("hr","button");</button>
+  <button id="c8">m("hr","foo");</button>
+  <button id="c9">m("hr","New!");</button>
 </body>
 </html>
