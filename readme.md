@@ -58,3 +58,21 @@ If you want to attach this object to another object, provide a css selector as a
 m("div","body");
 > <div></div>
 ```
+
+If the css selector finds more than one object match, a copy of the new object will be attached to each matched object, and the last copy attached to the last matched object will be returned.
+```
+m("div","button");
+> <div></div>
+```
+
+If the css selector finds nothing, false is returned.
+```
+m("div","foo");
+> <div></div>
+```
+
+If the css selector is bogus, undefined is returned.
+```
+m("div","New!");
+> <div></div>
+```
