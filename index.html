@@ -13,8 +13,8 @@ button {
 }
 </style>
 <script type="text/javascript">
-const m=(...p)=>{
-  const d=document;
+const d=document,
+m=(...p)=>{
   if(typeof p[0]==="string"){
     if(/^[a-z]+$/.test(p[0])!==true)return;
     let e=d.createElement(p[0]);
@@ -32,7 +32,7 @@ const m=(...p)=>{
               if(key+1===l){
                 item.appendChild(e);
               }else{
-                item.appendChild(d.createElement(p[0]));
+                item.appendChild(e.cloneNode(true));
               }
             });
         }
@@ -45,7 +45,6 @@ const m=(...p)=>{
   return;
 };
 window.onload=()=>{
-  const d=document;
   d.querySelector("#c1").onclick=()=>{console.log(m());};
   d.querySelector("#c2").onclick=()=>{console.log(m("div"));};
   d.querySelector("#c3").onclick=()=>{console.log(m("foo"));};
