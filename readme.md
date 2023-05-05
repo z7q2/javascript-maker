@@ -59,7 +59,7 @@ m("hr","body");
 > <hr>
 ```
 
-If the css selector finds more than one object match, a copy of the new object will be attached to each matched object, and the last copy attached to the last matched object will be returned.
+If the css selector finds more than one object match, a clone of the new object will be attached to each matched object, and the new object attached to the last matched object will be returned.
 ```
 m("hr","button");
 > <hr>
