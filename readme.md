@@ -11,7 +11,7 @@ But it took ES6 becoming normalized to make pure Javascript fun to write.
 Now you can program Javascript to ES6 specs and pretty much everything will run it, even a rock.
 
 Up to this point, it was necessary to have a library that let you make things in every browser in a common language,
-so you didn't have to fork your code in awkward places.
+so you didn't have to put many conditions in your code in awkward places.
 After a messy flirtation with browser detection, we moved sensibly to feature detection, and then wrote libraries to deal with it.
 At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, while Chrome was still an unborn demon lurking within an obscure browser called Konqueror. It was fun.
 
