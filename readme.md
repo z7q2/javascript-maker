@@ -79,7 +79,7 @@ m("hr","New!");
 > undefined
 ```
 
-To do anything more complex requires objects for input.
+To do anything more complex requires an object for input.
 
 The `m` key is used to make a new object. The behavior is similar to passing a string as the first parameter.
 ```
