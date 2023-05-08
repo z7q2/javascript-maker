@@ -77,4 +77,8 @@ m("hr","New!");
 > undefined
 ```
 
-to be continued...
+To do anything more complex requires objects for input. The `g` key is used to get existing objects as a NodeList from the DOM.
+```
+m({g:"p"});
+> > NodeList [p]
+```
