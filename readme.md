@@ -77,8 +77,13 @@ m("hr","New!");
 > undefined
 ```
 
-To do anything more complex requires objects for input. The `g` key is used to get existing objects as a NodeList from the DOM.
+To do anything more complex requires objects for input.
+
+The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a NodeList.
 ```
 m({g:"p"});
-> > NodeList [p]
+> <p id="p1">Sample text.</p>
+
+m({g:"button"});
+> > NodeList...
 ```
