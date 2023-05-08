@@ -38,6 +38,9 @@ m=(...p)=>{
     const o=p[0];
     if(typeof o.g!=="undefined"){
       const q=d.querySelectorAll(o.g);
+      if(q.length===1){
+        return q[0];
+      }
       return q;
     }
   }
@@ -53,7 +56,8 @@ window.onload=()=>{
   d.querySelector("#c7").onclick=()=>{console.log(m("hr","button"));};
   d.querySelector("#c8").onclick=()=>{console.log(m("hr","foo"));};
   d.querySelector("#c9").onclick=()=>{console.log(m("hr","New!"));};
-  d.querySelector("#c10").onclick=()=>{console.log(m({g:"p"}));};
+  d.querySelector("#c10").onclick=()=>{console.log(m({g:"#p1"}));};
+  d.querySelector("#c11").onclick=()=>{console.log(m({g:"button"}));};
 };
 </script>
 </head>
@@ -68,6 +72,8 @@ window.onload=()=>{
   <button id="c7">m("hr","button");</button>
   <button id="c8">m("hr","foo");</button>
   <button id="c9">m("hr","New!");</button>
-  <button id="c10">m({g:"p"});</button>
+  <p id="p1">Sample text.</p>
+  <button id="c10">m({g:"#p1"});</button>
+  <button id="c11">m({g:"button"});</button>
 </body>
 </html>
