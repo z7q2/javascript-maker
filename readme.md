@@ -83,7 +83,7 @@ To do anything more complex requires objects for input.
 
 The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a NodeList.
 ```
-m({g:"p"});
+m({g:"#p1"});
 > <p id="p1">Sample text.</p>
 
 m({g:"button"});
