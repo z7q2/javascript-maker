@@ -90,7 +90,25 @@ m({m:"¿que?"});
 > undefined
 ```
 
-The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a NodeList.
+The `i` key is used to add an id to an object.
+```
+m({m:"p",i:"p2"});
+> <p id="p2"></p>
+```
+
+The `t` key is used to add a text node to an object.
+```
+m({m:"p",t:"More sample text."});
+> <p>More sample text.</p>
+```
+
+These and other keys can be used in combination.
+```
+m({m:"p",i:"p2",t:"More sample text."});
+> <p id="p2">More sample text.</p>
+```
+
+The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a node list.
 ```
 m({g:"#p1"});
 > <p id="p1">Sample text.</p>
