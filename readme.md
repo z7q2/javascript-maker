@@ -44,7 +44,8 @@ m("foo");
 > <foo></foo>
 ```
 
-...within reason. If you provide anything other than lower case a-z (ASCII 97-122), nothing happens and undefined is returned.
+...within reason\*. If you provide anything other than lower case a-z (ASCII 97-122), nothing happens and undefined is returned.  
+<sub>\*Reason is relative here, as the only technical upper limit to the length of a DOM object name is available memory.</sub>
 ```
 m("boo boo");
 > undefined
@@ -52,6 +53,7 @@ m("boo boo");
 m("New!");
 > undefined
 ```
+
 
 If you want to attach this object to another object, provide a css selector as a second parameter. The new object will be attached to the selected object and returned.
 ```
@@ -86,4 +88,10 @@ m({g:"p"});
 
 m({g:"button"});
 > > NodeList...
+```
+
+If the css selector finds nothing, false is returned.
+```
+m({g:"foo"});
+> false
 ```
