@@ -81,6 +81,15 @@ m("hr","New!");
 
 To do anything more complex requires objects for input.
 
+The `m` key is used to make a new object. The behavior is similar to passing a string as the first parameter.
+```
+m({m:"p"});
+> <p></p>
+
+m({m:"¿que?"});
+> undefined
+```
+
 The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a NodeList.
 ```
 m({g:"#p1"});
@@ -95,3 +104,5 @@ If the css selector finds nothing, false is returned.
 m({g:"foo"});
 > false
 ```
+
+<!-- A typical use case for the `g` key is to modify the selected objects. -->
