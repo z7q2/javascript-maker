@@ -38,6 +38,7 @@ m=(...p)=>{
     const o=p[0];
     if(typeof o.g!=="undefined"){
       const q=d.querySelectorAll(o.g);
+      if(q.length===0)return false;
       if(q.length===1){
         return q[0];
       }
@@ -58,6 +59,7 @@ window.onload=()=>{
   d.querySelector("#c9").onclick=()=>{console.log(m("hr","New!"));};
   d.querySelector("#c10").onclick=()=>{console.log(m({g:"#p1"}));};
   d.querySelector("#c11").onclick=()=>{console.log(m({g:"button"}));};
+  d.querySelector("#c12").onclick=()=>{console.log(m({g:"foo"}));};
 };
 </script>
 </head>
@@ -75,5 +77,6 @@ window.onload=()=>{
   <p id="p1">Sample text.</p>
   <button id="c10">m({g:"#p1"});</button>
   <button id="c11">m({g:"button"});</button>
+  <button id="c12">m({g:"foo"});</button>
 </body>
 </html>
