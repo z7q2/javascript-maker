@@ -20,7 +20,7 @@ so I had to study the language and come up with my own **maker libraries**, as I
 This library has been written and re-written many times over the years. 
 I'm setting out to re-write it yet again, but in a clean ES6 implementation.
 
-### Live Example
+### Reference Implementation
 
 <a href="https://z7q2.azurewebsites.net/javascript-maker/index.html">https://z7q2.azurewebsites.net/javascript-maker/index.html</a>
 
