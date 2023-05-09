@@ -108,6 +108,15 @@ m({m:"p",i:"p2",t:"More sample text."});
 > <p id="p2">More sample text.</p>
 ```
 
+As before, to attach the new object to existing DOM objects, provide a css selector as a second parameter.
+```
+m({m:"p",t:"More sample text."},"body");
+> <p>More sample text.</p>
+
+m({m:"p",t:"More sample text."},"button");
+> <p>More sample text.</p>
+```
+
 The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a node list.
 ```
 m({g:"#p1"});
