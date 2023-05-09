@@ -110,8 +110,8 @@ m({m:"p",i:"p2",t:"More sample text."});
 
 As before, to attach the new object to existing DOM objects, provide a css selector as a second parameter.
 ```
-m({m:"p",t:"More sample text."},"body");
-> <p>More sample text.</p>
+m({m:"p",i:"p3",t:"More sample text."},"body");
+> <p id="p3">More sample text.</p>
 
 m({m:"p",t:"More sample text."},"button");
 > <p>More sample text.</p>
