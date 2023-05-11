@@ -12,7 +12,7 @@ Now you can program Javascript to ES6 specs and pretty much everything will run 
 
 During the 20-odd years between Javascript 1.0 and ES6, it became necessary to have some kind of library that let you make things in every browser in a common language,
 so you didn't have to put many conditions in your code in awkward places.
-After a messy flirtation with browser detection, I moved sensibly to feature detection, and then wrote library functions that hid all the messy browser exceptions behind tidy, short function calls.
+After a messy flirtation with browser detection, I moved sensibly to feature detection, and then wrote library functions that hid all the messy browser compatibility code behind tidy, short function calls.
 At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, while Chrome was still an unborn demon lurking within an obscure browser called Konqueror. 
 It was interesting.
 
