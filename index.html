@@ -81,7 +81,7 @@ window.onload=()=>{
    `m({m:"p",t:"More sample text."},"button")`,`m({g:"#p1"})`,
    `m({g:"button"})`,
    `m({g:"foo"})`],
-  insert=(i)=>{m({m:"button",t:i+";"},"body").onclick=()=>{console.log(eval(i+";"));};}; // harmful but useful
+  insert=(i)=>{m({m:"button",t:i+";"},"body").onclick=()=>{console.log(eval(i+";"));};};
   examples.slice(0,16).forEach((i)=>{insert(i);});
   m({m:"p",i:"p1",t:"Sample text."},"body");
   examples.slice(16).forEach((i)=>{insert(i);});
