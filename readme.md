@@ -20,9 +20,9 @@ Things like jQuery didn't exist when I started writing browser scripts,
 so I had to come up with my own **maker libraries**, as I called them.
 The main purpose of these libraries was to make, change and remove DOM objects on the web page without a trip back to the server.
 This was considered fancy business back in y2k, if you could get it to work in every browser.
-
 Using these libraries gradually coerces the input for them to defining web page elements with a JSON-style syntax.
 In fact an end goal of developing this particular version of the library is to parse JSON into web pages.
+
 This library has been written and re-written many times over the years. 
 This re-write will be in a clean ES6 implementation. It's also my first public GitHub project, so I'm using it to learn how to git.
 
