@@ -10,21 +10,21 @@ ECMAScript was supposed to bring order to things.
 But it took ES6 becoming normalized to make pure Javascript fun to write.
 Now you can program Javascript to ES6 specs and pretty much everything will run it, even a rock.
 
-Up to this point, it was necessary to have a library that let you make things in every browser in a common language,
+During the 20-odd years between Javascript 1.0 and ES6, it became necessary to have some kind of library that let you make things in every browser in a common language,
 so you didn't have to put many conditions in your code in awkward places.
-After a messy flirtation with browser detection, we moved sensibly to feature detection, and then wrote libraries to deal with it.
+After a messy flirtation with browser detection, I moved sensibly to feature detection, and then wrote library functions that hid all the messy browser exceptions behind tidy, short function calls.
 At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, while Chrome was still an unborn demon lurking within an obscure browser called Konqueror. 
 It was interesting.
 
 Things like jQuery didn't exist when I started writing browser scripts, 
-so I had to study the language and come up with my own **maker libraries**, as I called them.
+so I had to come up with my own **maker libraries**, as I called them.
 The main purpose of these libraries was to make, change and remove DOM objects on the web page without a trip back to the server.
 This was considered fancy business back in y2k, if you could get it to work in every browser.
 
 Using these libraries gradually coerces the input for them to defining web page elements with a JSON-style syntax.
 In fact an end goal of developing this particular version of the library is to parse JSON into web pages.
 This library has been written and re-written many times over the years. 
-This re-write will be in a clean ES6 implementation.
+This re-write will be in a clean ES6 implementation. It's also my first public GitHub project, so I'm using it to learn how to git.
 
 ### Reference Implementation
 
