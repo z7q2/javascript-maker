@@ -13,12 +13,17 @@ Now you can program Javascript to ES6 specs and pretty much everything will run 
 Up to this point, it was necessary to have a library that let you make things in every browser in a common language,
 so you didn't have to put many conditions in your code in awkward places.
 After a messy flirtation with browser detection, we moved sensibly to feature detection, and then wrote libraries to deal with it.
-At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, while Chrome was still an unborn demon lurking within an obscure browser called Konqueror. It was fun.
+At one point I was writing code that had to work on Netscape 4 and 6, IE6, IE5 for Mac, AOL, and WebTV, while Chrome was still an unborn demon lurking within an obscure browser called Konqueror. 
+It was interesting.
 
 Things like jQuery didn't exist when I started writing browser scripts, 
 so I had to study the language and come up with my own **maker libraries**, as I called them.
+The main purpose of these libraries was to make, change and remove DOM objects on the web page without a trip back to the server.
+This was considered fancy business back in the late 1990s.
+Using these libraries gradually coerces the input for them to defining web page elements with a JSON-style syntax.
+In fact an end goal of developing this particular version of the library is to parse JSON into web pages.
 This library has been written and re-written many times over the years. 
-I'm setting out to re-write it yet again, but in a clean ES6 implementation.
+This re-write will be in a clean ES6 implementation.
 
 ### Reference Implementation
 
@@ -79,7 +84,7 @@ m("hr","New!");
 > undefined
 ```
 
-To do anything more complex requires an object for input.
+To do anything more complex requires an object as the first parameter.
 
 The `m` key is used to make a new object. The behavior is similar to passing a string as the first parameter.
 ```
