@@ -63,25 +63,26 @@ const m=(...p)=>{
 };
 window.onload=()=>{
   m({m:"p",t:"Please view your console for the return result of these buttons."},"body");
-  const examples=[`m()`,
-   `m("div")`,
-   `m("foo")`,
-   `m("boo boo")`,
-   `m("New!")`,
-   `m("hr","body")`,
-   `m("hr","button")`,
-   `m("hr","foo")`,
-   `m("hr","New!")`,
-   `m({m:"p"})`,
-   `m({m:"¿que?"})`,
-   `m({m:"p",i:"p2"})`,
-   `m({m:"p",t:"More sample text."})`,
-   `m({m:"p",i:"p2",t:"More sample text."})`,
-   `m({m:"p",i:"p3",t:"More sample text."},"body")`,
-   `m({m:"p",t:"More sample text."},"button")`,`m({g:"#p1"})`,
-   `m({g:"button"})`,
-   `m({g:"foo"})`],
-  insert=(i)=>{m({m:"button",t:i+";"},"body").onclick=()=>{console.log(eval(i+";"));};};
+  const examples=[``,
+   `"div"`,
+   `"foo"`,
+   `"boo boo"`,
+   `"New!"`,
+   `"hr","body"`,
+   `"hr","button"`,
+   `"hr","foo"`,
+   `"hr","New!"`,
+   `{m:"p"}`,
+   `{m:"¿que?"}`,
+   `{m:"p",i:"p2"}`,
+   `{m:"p",t:"More sample text."}`,
+   `{m:"p",i:"p2",t:"More sample text."}`,
+   `{m:"p",i:"p3",t:"More sample text."},"body"`,
+   `{m:"p",t:"More sample text."},"button"`,
+   `{g:"#p1"}`,
+   `{g:"button"}`,
+   `{g:"foo"}`],
+  insert=(i)=>{m({m:"button",t:"m("+i+");"},"body").onclick=()=>{console.log(eval("m("+i+");"));};};
   examples.slice(0,16).forEach((i)=>{insert(i);});
   m({m:"p",i:"p1",t:"Sample text."},"body");
   examples.slice(16).forEach((i)=>{insert(i);});
