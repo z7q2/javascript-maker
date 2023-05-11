@@ -45,7 +45,7 @@ m=(...p)=>{
   if(typeof o.t!=="undefined"){
     e.appendChild(d.createTextNode(String(o.t)));
   }
-  if(typeof p[1]==="string"){ // BLOCK A
+  if(typeof p[1]==="string"){
     try{
       const q=d.querySelectorAll(p[1]),
       l=q.length;
@@ -62,49 +62,31 @@ m=(...p)=>{
   return e;
 };
 window.onload=()=>{
-  d.querySelector("#c1").onclick=()=>{console.log(m());};
-  d.querySelector("#c2").onclick=()=>{console.log(m("div"));};
-  d.querySelector("#c3").onclick=()=>{console.log(m("foo"));};
-  d.querySelector("#c4").onclick=()=>{console.log(m("boo boo"));};
-  d.querySelector("#c5").onclick=()=>{console.log(m("New!"));};
-  d.querySelector("#c6").onclick=()=>{console.log(m("hr","body"));};
-  d.querySelector("#c7").onclick=()=>{console.log(m("hr","button"));};
-  d.querySelector("#c8").onclick=()=>{console.log(m("hr","foo"));};
-  d.querySelector("#c9").onclick=()=>{console.log(m("hr","New!"));};
-  d.querySelector("#c10").onclick=()=>{console.log(m({m:"p"}));};
-  d.querySelector("#c11").onclick=()=>{console.log(m({m:"¿que?"}));};
-  d.querySelector("#c12").onclick=()=>{console.log(m({m:"p",i:"p2"}));};
-  d.querySelector("#c13").onclick=()=>{console.log(m({m:"p",t:"More sample text."}));};
-  d.querySelector("#c14").onclick=()=>{console.log(m({m:"p",i:"p2",t:"More sample text."}));};
-  d.querySelector("#c15").onclick=()=>{console.log(m({m:"p",i:"p3",t:"More sample text."},"body"));};
-  d.querySelector("#c16").onclick=()=>{console.log(m({m:"p",t:"More sample text."},"button"));};
-  d.querySelector("#c17").onclick=()=>{console.log(m({g:"#p1"}));};
-  d.querySelector("#c18").onclick=()=>{console.log(m({g:"button"}));};
-  d.querySelector("#c19").onclick=()=>{console.log(m({g:"foo"}));};
+  m({m:"p",t:"Please view your console for the return result of these buttons."},"body");
+  const examples=[`m()`,
+   `m("div")`,
+   `m("foo")`,
+   `m("boo boo")`,
+   `m("New!")`,
+   `m("hr","body")`,
+   `m("hr","button")`,
+   `m("hr","foo")`,
+   `m("hr","New!")`,
+   `m({m:"p"})`,
+   `m({m:"¿que?"})`,
+   `m({m:"p",i:"p2"})`,
+   `m({m:"p",t:"More sample text."})`,
+   `m({m:"p",i:"p2",t:"More sample text."})`,
+   `m({m:"p",i:"p3",t:"More sample text."},"body")`,
+   `m({m:"p",t:"More sample text."},"button")`,`m({g:"#p1"})`,
+   `m({g:"button"})`,
+   `m({g:"foo"})`],
+  insert=(i)=>{m({m:"button",t:i+";"},"body").onclick=()=>{console.log(eval(i));};}; // harmful but useful
+  examples.slice(0,16).forEach((item)=>{insert(item);});
+  m({m:"p",i:"p1",t:"Sample text."},"body");
+  examples.slice(16).forEach((item)=>{insert(item);});
 };
 </script>
 </head>
-<body>
-  <p>Please view your console for the return result of these buttons.</p>
-  <button id="c1">m();</button>
-  <button id="c2">m("div");</button>
-  <button id="c3">m("foo");</button>
-  <button id="c4">m("boo boo");</button>
-  <button id="c5">m("New!");</button>
-  <button id="c6">m("hr","body");</button>
-  <button id="c7">m("hr","button");</button>
-  <button id="c8">m("hr","foo");</button>
-  <button id="c9">m("hr","New!");</button>
-  <button id="c10">m({m:"p"});</button>
-  <button id="c11">m({m:"¿que?"});</button>
-  <button id="c12">m({m:"p",i:"p2"});</button>
-  <button id="c13">m({m:"p",t:"More sample text."});</button>
-  <button id="c14">m({m:"p",i:"p2",t:"More sample text."});</button>
-  <button id="c15">m({m:"p",i:"p3",t:"More sample text."},"body");</button>
-  <button id="c16">m({m:"p",t:"More sample text."},"button");</button>
-  <p id="p1">Sample text.</p>
-  <button id="c17">m({g:"#p1"});</button>
-  <button id="c18">m({g:"button"});</button>
-  <button id="c19">m({g:"foo"});</button>
-</body>
+<body></body>
 </html>
