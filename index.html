@@ -45,6 +45,9 @@ const m=(...p)=>{
   if(typeof o.t==="string"){
     e.appendChild(d.createTextNode(String(o.t)));
   }
+  if(typeof o.x==="object"){
+    Object.keys(o.x).forEach((key)=>{e.setAttribute(key,o.x[key]);});
+  }
   if(typeof p[1]==="string"){
     try{
       const q=d.querySelectorAll(p[1]),
@@ -82,7 +85,7 @@ window.onload=()=>{
    `{g:"#p1"}`,
    `{g:"button"}`,
    `{g:"foo"}`],
-  insert=(i)=>{m({m:"button",t:"m("+i+");"},"body").onclick=()=>{console.log(eval("m("+i+");"));};};
+  insert=(i)=>{m({m:"button",t:"m("+i+");",x:{"type":"button"}},"body").onclick=()=>{console.log(eval("m("+i+");"));};};
   examples.slice(0,16).forEach((i)=>{insert(i);});
   m({m:"p",i:"p1",t:"Sample text."},"body");
   examples.slice(16).forEach((i)=>{insert(i);});
