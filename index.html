@@ -12,61 +12,11 @@ button {
   padding:0.25em;
 }
 </style>
+<script type="text/javascript" src="maker.js"></script>
 <script type="text/javascript">
-const m=(...p)=>{
-  const d=document;
-  if(p.length===0)return;
-  const ty=typeof p[0];
-  let o={};
-  if(["string","object"].includes(ty)){
-    if(ty==="string"){
-      o.m=p[0];
-    }else{
-      o=p[0];
-    }
-  }
-  if(typeof o.g==="string"){
-    try{
-      const q=d.querySelectorAll(o.g);
-      if(q.length===0)return false;
-      if(q.length===1){
-        return q[0];
-      }
-      return q;
-    }catch(err){return;}
-  }
-  if(typeof o.m==="string"){
-    if(/^[a-z]+$/.test(o.m)!==true)return;
-  }
-  let e=d.createElement(o.m);
-  if(typeof o.i==="string"){
-    e.setAttribute("id",String(o.i));
-  }
-  if(typeof o.t==="string"){
-    e.appendChild(d.createTextNode(String(o.t)));
-  }
-  if(typeof o.x==="object"){
-    Object.keys(o.x).forEach((key)=>{e.setAttribute(key,o.x[key]);});
-  }
-  if(typeof p[1]==="string"){
-    try{
-      const q=d.querySelectorAll(p[1]),
-      l=q.length;
-      if(l===0)return false;
-      q.forEach((item,key)=>{
-        if(key+1===l){
-          item.appendChild(e);
-        }else{
-          item.appendChild(e.cloneNode(true));
-        }
-      });
-    }catch(err){return;}
-  }
-  return e;
-};
 window.onload=()=>{
   m({m:"p",t:"Please view your console for the return result of these buttons."},"body");
-  const examples=[``,
+  const buttons=[``,
    `"div"`,
    `"foo"`,
    `"boo boo"`,
@@ -85,10 +35,14 @@ window.onload=()=>{
    `{g:"#p1"}`,
    `{g:"button"}`,
    `{g:"foo"}`],
-  insert=(i)=>{m({m:"button",t:"m("+i+");",x:{"type":"button"}},"body").onclick=()=>{console.log(eval("m("+i+");"));};};
-  examples.slice(0,16).forEach((i)=>{insert(i);});
+  makebutton=(params)=>{
+    m({m:"button",t:"m("+params+");",x:{"type":"button"}},"body").onclick=()=>{
+      console.log(eval("m("+params+");"));
+    };
+  };
+  buttons.slice(0,16).forEach((i)=>{makebutton(i);});
   m({m:"p",i:"p1",t:"Sample text."},"body");
-  examples.slice(16).forEach((i)=>{insert(i);});
+  buttons.slice(16).forEach((i)=>{makebutton(i);});
 };
 </script>
 </head>
