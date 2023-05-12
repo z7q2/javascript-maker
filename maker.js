@@ -12,12 +12,18 @@ if(["string","object"].includes(ty)){
 }
 if(typeof o.g==="string"){
   try{
-    const q=d.querySelectorAll(o.g);
-    if(q.length===0)return false;
-    if(q.length===1){
-      return q[0];
-    }
-    return q;
+    const q=d.querySelectorAll(o.g),
+    l=q.length;
+    let g=false;
+    if(l===0)return g;
+    q.forEach((item)=>{
+      g=item;
+      if(typeof o.i==="string"){
+        if(g.hasAttribute("id"))g.removeAttribute("id");
+        g.setAttribute("id",String(o.i));
+      }
+    });
+    return g;
   }catch(err){return;}
 }
 if(typeof o.m==="string"){
