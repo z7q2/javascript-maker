@@ -19,7 +19,6 @@ if(typeof o.g==="string"){
     q.forEach((item)=>{
       g=item;
       if(typeof o.i==="string"){
-        if(g.hasAttribute("id"))g.removeAttribute("id");
         g.setAttribute("id",String(o.i));
       }
     });
