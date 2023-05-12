@@ -1,0 +1,51 @@
+var m=(...p)=>{
+const d=document;
+if(p.length===0)return;
+const ty=typeof p[0];
+let o={};
+if(["string","object"].includes(ty)){
+  if(ty==="string"){
+    o.m=p[0];
+  }else{
+    o=p[0];
+  }
+}
+if(typeof o.g==="string"){
+  try{
+    const q=d.querySelectorAll(o.g);
+    if(q.length===0)return false;
+    if(q.length===1){
+      return q[0];
+    }
+    return q;
+  }catch(err){return;}
+}
+if(typeof o.m==="string"){
+  if(/^[a-z]+$/.test(o.m)!==true)return;
+}
+let e=d.createElement(o.m);
+if(typeof o.i==="string"){
+  e.setAttribute("id",String(o.i));
+}
+if(typeof o.t==="string"){
+  e.appendChild(d.createTextNode(String(o.t)));
+}
+if(typeof o.x==="object"){
+  Object.keys(o.x).forEach((key)=>{e.setAttribute(key,o.x[key]);});
+}
+if(typeof p[1]==="string"){
+  try{
+    const q=d.querySelectorAll(p[1]),
+    l=q.length;
+    if(l===0)return false;
+    q.forEach((item,key)=>{
+      if(key+1===l){
+        item.appendChild(e);
+      }else{
+        item.appendChild(e.cloneNode(true));
+      }
+    });
+  }catch(err){return;}
+}
+return e;
+};
