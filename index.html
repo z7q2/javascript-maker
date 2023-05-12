@@ -27,22 +27,26 @@ window.onload=()=>{
    `"hr","New!"`,
    `{m:"p"}`,
    `{m:"¿que?"}`,
-   `{m:"p",i:"p2"}`,
-   `{m:"p",t:"More sample text."}`,
-   `{m:"p",i:"p2",t:"More sample text."}`,
-   `{m:"p",i:"p3",t:"More sample text."},"body"`,
-   `{m:"p",t:"More sample text."},"button"`,
    `{g:"#p1"}`,
-   `{g:"button"}`,
-   `{g:"foo"}`],
+   `{g:"p"}`,
+   `{g:"foo"}`,
+   `{g:"%rg"}`,
+   `{m:"p",i:"p2"}`,
+   `{g:"#p1",i:"p4"}`,
+   `{g:"p",i:"p5"}`,
+   `{m:"p",t:"Even more sample text."}`,
+   `{m:"p",i:"p2",t:"Lots of sample text."}`,
+   `{m:"p",i:"p3",t:"Even more sample text."},"body"`,
+   `{m:"p",t:"Button text."},"button"`],
   makebutton=(params)=>{
     m({m:"button",t:"m("+params+");",x:{"type":"button"}},"body").onclick=()=>{
       console.log(eval("m("+params+");"));
     };
   };
-  buttons.slice(0,16).forEach((i)=>{makebutton(i);});
+  buttons.slice(0,11).forEach((i)=>{makebutton(i);});
   m({m:"p",i:"p1",t:"Sample text."},"body");
-  buttons.slice(16).forEach((i)=>{makebutton(i);});
+  m({m:"p",i:"p2",t:"More sample text."},"body");
+  buttons.slice(11).forEach((i)=>{makebutton(i);});
 };
 </script>
 </head>
