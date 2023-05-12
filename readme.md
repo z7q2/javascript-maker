@@ -96,40 +96,13 @@ m({m:"¿que?"});
 > undefined
 ```
 
-The `i` key is used to add an id to an object.
-```
-m({m:"p",i:"p2"});
-> <p id="p2"></p>
-```
-
-The `t` key is used to add a text node to an object.
-```
-m({m:"p",t:"More sample text."});
-> <p>More sample text.</p>
-```
-
-These and other keys can be used in combination.
-```
-m({m:"p",i:"p2",t:"More sample text."});
-> <p id="p2">More sample text.</p>
-```
-
-As before, to attach the new object to existing DOM objects, provide a css selector as a second parameter.
-```
-m({m:"p",i:"p3",t:"More sample text."},"body");
-> <p id="p3">More sample text.</p>
-
-m({m:"p",t:"More sample text."},"button");
-> <p>More sample text.</p>
-```
-
-The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, they are returned as a node list.
+The `g` key is used to get existing objects using a css selector value. If one object is found, it is returned. If more than one object is found, the last object found is returned.
 ```
 m({g:"#p1"});
 > <p id="p1">Sample text.</p>
 
-m({g:"button"});
-> > NodeList...
+m({g:"p"});
+> <p id="p2">More sample text.</p>
 ```
 
 If the css selector finds nothing, false is returned.
@@ -137,5 +110,52 @@ If the css selector finds nothing, false is returned.
 m({g:"foo"});
 > false
 ```
+
+If the css selector is bogus, undefined is returned.
+```
+m({g:"%rg"});
+> undefined
+```
+
+The `i` key is used to add an id to an object. If you're using the `m` key, the new object gets the id.
+```
+m({m:"p",i:"p2"});
+> <p id="p2"></p>
+```
+
+If you're using the `g` key, the selected object gets the id. If the object already has an id, it is replaced with the new value.
+```
+m({g:"#p1",i:"p4"});
+> <p id="p4">Sample text.</p>
+```
+
+If the `g` key has selected more than one object, all selected objects will get the new id. The last object found is returned with the new id.
+```
+m({g:"p",i:"p5"});
+> <p id="p5">More sample text.</p>
+```
+
+The `t` key is used to add a text node to an object.
+```
+m({m:"p",t:"Even more sample text."});
+> <p>Even more sample text.</p>
+```
+
+These and other keys can be used in combination.
+```
+m({m:"p",i:"p2",t:"Lots of sample text."});
+> <p id="p2">Lots of sample text.</p>
+```
+
+As before, to attach the new object to existing DOM objects, provide a css selector as a second parameter.
+```
+m({m:"p",i:"p3",t:"Even more sample text."},"body");
+> <p id="p3">Even more sample text.</p>
+
+m({m:"p",t:"Button text."},"button");
+> <p>Button text.</p>
+```
+
+<img src="https://z7q4.com/tbc.jpg" alt="To Be Continued" style="height:100px;width:325px;"/>
 
 <!-- A typical use case for the `g` key is to modify the selected objects. -->
