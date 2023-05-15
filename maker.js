@@ -10,6 +10,7 @@ if(["string","object"].includes(ty)){
     o=p[0];
   }
 }
+if(o===null)return;
 if(typeof o.g==="string"){
   try{
     const q=d.querySelectorAll(o.g),
@@ -25,10 +26,11 @@ if(typeof o.g==="string"){
     return g;
   }catch(err){return;}
 }
+let e;
 if(typeof o.m==="string"){
   if(/^[a-z]+$/.test(o.m)!==true)return;
+  e=d.createElement(o.m);
 }
-let e=d.createElement(o.m);
 if(typeof o.i==="string"){
   e.setAttribute("id",String(o.i));
 }
@@ -38,6 +40,7 @@ if(typeof o.t==="string"){
 if(typeof o.x==="object"){
   Object.keys(o.x).forEach((key)=>{e.setAttribute(key,o.x[key]);});
 }
+if(p.length===1)return e;
 if(typeof p[1]==="string"){
   try{
     const q=d.querySelectorAll(p[1]),
