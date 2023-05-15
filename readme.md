@@ -73,14 +73,11 @@ m("hr","button");
 > <hr>
 ```
 
-If the css selector finds nothing, false is returned.
+If the css selector finds nothing, false is returned. If the css selector is bogus, undefined is returned.
 ```
 m("hr","foo");
 > false
-```
 
-If the css selector is bogus, undefined is returned.
-```
 m("hr","New!");
 > undefined
 ```
@@ -105,14 +102,11 @@ m({g:"p"});
 > <p id="p2">More sample text.</p>
 ```
 
-If the css selector finds nothing, false is returned.
+If the css selector finds nothing, false is returned. If the css selector is bogus, undefined is returned.
 ```
 m({g:"foo"});
 > false
-```
 
-If the css selector is bogus, undefined is returned.
-```
 m({g:"%rg"});
 > undefined
 ```
@@ -129,7 +123,7 @@ m({g:"#p1",i:"p4"});
 > <p id="p4">Sample text.</p>
 ```
 
-If the `g` key has selected more than one object, all selected objects will get the new id. The last object found is returned with the new id.
+If the `g` key has selected more than one object, all selected objects will get the new id, or have their existing id changed to the new value. The last object found is returned with the new id.
 ```
 m({g:"p",i:"p5"});
 > <p id="p5">More sample text.</p>
