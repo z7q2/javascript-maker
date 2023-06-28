@@ -22,6 +22,9 @@ if(typeof o.g==="string"){
       if(typeof o.i==="string"){
         g.setAttribute("id",String(o.i));
       }
+      if(typeof o.t==="string"){
+        g.replaceChildren(d.createTextNode(String(o.t)));
+      }
     });
     return g;
   }catch(err){return;}
